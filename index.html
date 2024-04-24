@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="x-icon" href="icon.jpg">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <form id="taskForm">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" name="taskName" required>
+            <label for="taskTime">Task Time:</label>
+            <input type="datetime-local" id="taskTime" name="taskTime" required>
+            <label for="taskNote">Task Note:</label>
+            <textarea id="taskNote" name="taskNote" rows="4" cols="50"></textarea>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <h2>Task List</h2>
+        <table id="taskList">
+            <thead>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Task Time</th>
+                    <th>Task Note</th>
+                    <th>Action</th> <!-- New column for delete button -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Tasks will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
